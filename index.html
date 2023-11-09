@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MapleStory - Hyperion</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <div class="title">
-        <h1>MapleStory</h1>
+        <div class="maplestorylogoteste">
+            <h1>MapleStory</h1>
+            <img class="maplestorylogo" src="images/maplestorylogo.png" alt="logo do maplestory">
+        </div>
         <h2>Hyperion</h2>
         <!-- <img class="maplestorylogo" src="images/maplestorylogo.png" alt="MapleStory_logo.png"> -->
         <hr>
+    </div>
+
+    <div class="iconsyt">
+        <h10 class="Supportx">Support us</h10>
+        <a href="https://discord.gg/snackclub" target="_blank" class="link-discord">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="link-youtube">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+        <a href="https://www.twitch.tv/" target="_blank" class="link-twitch">
+            <i class="fa fa-twitch icone-twitch"></i>
+        </a>
+    </div>
+
+
+    <div class="div-countdown">
+        <p id="countdown"></p>
     </div>
 
     <div class="background-div">
@@ -23,7 +46,8 @@
     </div>
 
 
-    <div class="div-explorer">
+
+    <div class="divexplorer">
         <h3>Explorer</h3>
         <ul id="explorer">
             <li data-image="images/Explorer/HERO.png">Hero</li>
@@ -44,75 +68,145 @@
         </ul>
     </div>
 
-    <div class="div-cygnus-knights">
+    <div id="modalexplorer" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="arrow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <img id="modalimageexplorer" class="modal-content">
+            <div id="modalcaptionexplorer"></div>
+        </div>
+    </div>
+
+    <div class="divcygnusknights">
         <h3>Cygnus Knights</h3>
-        <ul id="cygnus-knights">
-            <li data-image="images/Explorer/HERO.png">Mihile</li>
-            <li data-image="images/Explorer/PALADIN.png">Dawn Warrior</li>
-            <li data-image="images/Explorer/DARK KNIGHT.png">Wind Archer</li>
-            <li data-image="images/Explorer/BUCCANEER.png">Blaze Wizard</li>
-            <li data-image="images/Explorer/CORSAIR.png">Night Walker</li>
-            <li data-image="images/Explorer/CANNONEER.png">Thunder Breaker</li>
+        <ul id="cygnusknights">
+            <li data-image="images/CYGNUS_KNIGHTS/MIHILE.png">Mihile</li>
+            <li data-image="images/CYGNUS_KNIGHTS/DAWN WARRIOR.png">Dawn Warrior</li>
+            <li data-image="images/CYGNUS_KNIGHTS/WIND ARCHER.png">Wind Archer</li>
+            <li data-image="images/CYGNUS_KNIGHTS/BLAZE WIZARD.png">Blaze Wizard</li>
+            <li data-image="images/CYGNUS_KNIGHTS/NIGHT WALKER.png">Night Walker</li>
+            <li data-image="images/CYGNUS_KNIGHTS/THUNDER BREAKER.png">Thunder Breaker</li>
         </ul>
     </div>
 
-    <div class="div-Heroes">
+    <div id="modalcygnusknights" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="arrow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <img id="modalimagecygnusknights" class="modal-content">
+            <div id="modalcaptioncygnusknights"></div>
+        </div>
+    </div>
+
+    <div class="divheroes">
         <h3>Heroes</h3>
-        <ul id="Heroes">
-            <li data-image="images/Explorer/HERO.png">Aran</li>
-            <li data-image="images/Explorer/PALADIN.png">Mercedes</li>
-            <li data-image="images/Explorer/DARK KNIGHT.png">Evan</li>
-            <li data-image="images/Explorer/BUCCANEER.png">Luminous</li>
-            <li data-image="images/Explorer/CORSAIR.png">Phantom</li>
-            <li data-image="images/Explorer/CANNONEER.png">Shade</li>
+        <ul id="heroes">
+            <li data-image="images/HEROES/ARAN.jpeg">Aran</li>
+            <li data-image="images/HEROES/MERCEDES.png">Mercedes</li>
+            <li data-image="images/HEROES/EVAN.png">Evan</li>
+            <li data-image="images/HEROES/LUMINOUS.png">Luminous</li>
+            <li data-image="images/HEROES/PHANTOM.png">Phantom</li>
+            <li data-image="images/HEROES/SHADE.png">Shade</li>
         </ul>
     </div>
 
-    <div class="div-resistance">
+    <!-- <div id="modalheroes" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <img id="modalimageheroes" class="modal-content">
+            <div id="modalcaptionheroes"></div>
+        </div>
+    </div> -->
+
+    <div id="modalheroes" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="arrow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <img id="modalimageheroes" class="modal-content">
+            <div id="modalcaptionheroes"></div>
+        </div>
+    </div>
+
+    <div class="divresistance">
         <h3>Resistance</h3>
         <ul id="resistance">
-            <li data-image="images/Explorer/HERO.png">Hero</li>
-            <li data-image="images/Explorer/PALADIN.png">Paladin</li>
-            <li data-image="images/Explorer/DARK KNIGHT.png">Dark Knight</li>
-            <li data-image="images/Explorer/BUCCANEER.png">Buccaneer</li>
-            <li data-image="images/Explorer/CORSAIR.png">Corsair</li>
-            <li data-image="images/Explorer/CANNONEER.png">Cannoneer</li>
-            <li data-image="images/Explorer/BOWMASTER.png">Bowmaster</li>
-            <li data-image="images/Explorer/MARKSMAN.png">Marksman</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Pathfinder</li>
+            <li data-image="images/RESISTANCE/DEMON SLAYER.jpeg">Demon Slayer</li>
+            <li data-image="images/RESISTANCE/DEMON AVANGER.png">Demon Avenger</li>
+            <li data-image="images/RESISTANCE/BATTLE MAGE.png">Battle Mage</li>
+            <li data-image="images/RESISTANCE/WILD HUNTER.png">Wild Hunter</li>
+            <li data-image="images/RESISTANCE/XENON.png">Xenon</li>
+            <li data-image="images/RESISTANCE/BLASTER.png">Blaster</li>
+            <li data-image="images/RESISTANCE/MECHANIC.png">Mechanic</li>
+
         </ul>
     </div>
 
-    <div class="div-Others">
+    <div id="modalresistance" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="arrow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <img id="modalimageresistance" class="modal-content">
+            <div id="modalcaptionresistance"></div>
+        </div>
+    </div>
+
+    <div class="divothers">
         <h3>Others</h3>
-        <ul id="Others">
-            <li data-image="images/Explorer/HERO.png">Kaiser</li>
-            <li data-image="images/Explorer/PALADIN.png">Angelic Buster</li>
-            <li data-image="images/Explorer/DARK KNIGHT.png">Kain</li>
-            <li data-image="images/Explorer/BUCCANEER.png">Illium</li>
-            <li data-image="images/Explorer/CORSAIR.png">Ark</li>
-            <li data-image="images/Explorer/CANNONEER.png">Adele</li>
-            <li data-image="images/Explorer/BOWMASTER.png">Khali</li>
-            <li data-image="images/Explorer/MARKSMAN.png">Hoyoung</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Lara</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Kinesis</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Beast Tamer</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Hayato</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Zero</li>
-            <li data-image="images/Explorer/PATHFINDER.png">Kanna</li>
+        <ul id="others">
+            <li data-image="images/OTHER_FACTIONS/KAISER.png">Kaiser</li>
+            <li data-image="images/OTHER_FACTIONS/ANGELIC BUSTER.png">Angelic Buster</li>
+            <li data-image="images/OTHER_FACTIONS/KAIN.jpeg">Kain</li>
+            <li data-image="images/OTHER_FACTIONS/ILLIUM.png">Illium</li>
+            <li data-image="images/OTHER_FACTIONS/ARK.jpeg">Ark</li>
+            <li data-image="images/OTHER_FACTIONS/ADELE.png">Adele</li>
+            <li data-image="images/OTHER_FACTIONS/KHALI.png">Khali</li>
+            <li data-image="images/OTHER_FACTIONS/HOYOUNG.png">Hoyoung</li>
+            <li data-image="images/OTHER_FACTIONS/LARA.png">Lara</li>
+            <li data-image="images/OTHER_FACTIONS/KINESIS.png">Kinesis</li>
+            <li data-image="images/OTHER_FACTIONS/BEAST TAMER.png">Beast Tamer</li>
+            <li data-image="images/OTHER_FACTIONS/HAYATO.jpeg">Hayato</li>
+            <li data-image="images/OTHER_FACTIONS/ZERO.png">Zero</li>
+            <li data-image="images/OTHER_FACTIONS/KANNA.png">Kanna</li>
         </ul>
     </div>
 
+    <div id="modalothers" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-container">
+            <div class="arrow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <img id="modalimageothers" class="modal-content">
+            <div id="modalcaptionothers"></div>
+        </div>
+    </div>
 
-    <div id="modal" class="modal">
+
+
+    <!-- <div id="modal" class="modal">
         <div id="modalcaption"></div>
         <span class="close">&times;</span>
         <button id="BotaoAnterior" onclick="plusSlides(-1)">&lArr;</button>
         <img class="modal-content" id="modalimage">
         <button id="BotaoProximo" onclick="plusSlides(1)">&rArr;</button>
-    </div>
+    </div> -->
 
     <script src="script.js"></script>
+    <script src="countdowntimer.js"></script>
+
 
 </body>
 

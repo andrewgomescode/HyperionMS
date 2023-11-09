@@ -6,14 +6,15 @@
 }
 
 body{
-    display: flex;
     height: 100vh;
     margin: 0;
 }
 
 .title{
     width: 100%;
-    margin-top: 14px;
+    padding-top: 10px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.442) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.453) 100%);
 }
 
 h1{
@@ -22,6 +23,12 @@ h1{
     text-align: center;
     color: white;
     text-shadow: 1px 1px 2px black;
+    display: inline-block;
+}
+
+h1:hover{
+    color: rgb(255, 229, 229);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
 h2{
@@ -30,11 +37,11 @@ h2{
     text-align: center;
     color: white;
     text-shadow: 1px 1px 2px black;
-    margin-bottom: 14px;
+    margin-bottom: 14px;  
 }
-
 .maplestorylogo{
-    size: 20%;
+    width: 50px;
+    display: inline-block;
 }
 
 .background-div{
@@ -78,7 +85,7 @@ h3{
 
 }
 
-.div-explorer{
+.divexplorer{
     position: fixed;
     text-align: center;
     font-family: MapleStory Bold;
@@ -86,7 +93,7 @@ h3{
     width: 17%;
     height: 30px;
     left: 2.5vw;
-    top: 65vh;
+    top: 70vh;
 }
 
 #explorer:hover{
@@ -118,7 +125,7 @@ h3{
     transition: background-color 0.3s ease;
 }
 
-.div-cygnus-knights{
+.divcygnusknights{
     position: fixed;
     text-align: center;
     font-family: MapleStory Bold;
@@ -126,14 +133,14 @@ h3{
     width: 17%;
     height: 30px;
     left: 22vw;
-    top: 65vh;
+    top: 70vh;
 }
 
-#cygnus-knights:hover{
+#cygnusknights:hover{
     overflow-y: scroll;
 }
 
-#cygnus-knights{                            /*  Mexe na box  */
+#cygnusknights{                            /*  Mexe na box  */
     position: fixed;
     cursor: pointer;
     overflow: hidden;
@@ -147,18 +154,18 @@ h3{
     background: linear-gradient(107deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3533788515406162) 49%, rgba(0,0,0,1) 100%);
 }
 
-#cygnus-knights li{
+#cygnusknights li{
     font-size: 20px;
     margin: 5px 0;
 }
 
-#cygnus-knights li:hover{
+#cygnusknights li:hover{
     background-color: #ddd;
     color: #333;
     transition: background-color 0.3s ease;
 }
 
-.div-Heroes{
+.divheroes{
     position: fixed;
     text-align: center;
     font-family: MapleStory Bold;
@@ -166,14 +173,14 @@ h3{
     width: 17%;
     height: 30px;
     left: 41.5vw;
-    top: 65vh;
+    top: 70vh;
 }
 
 #Heroes:hover{
     overflow-y: scroll;
 }
 
-#Heroes{                                    /*  Mexe na box  */
+#heroes{                                    /*  Mexe na box  */
     position: fixed;
     cursor: pointer;
     overflow: hidden;
@@ -187,18 +194,18 @@ h3{
     background: linear-gradient(107deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3533788515406162) 49%, rgba(0,0,0,1) 100%);
 }
 
-#Heroes li{
+#heroes li{
     font-size: 20px;
     margin: 5px 0;
 }
 
-#Heroes li:hover{
+#heroes li:hover{
     background-color: #ddd;
     color: #333;
     transition: background-color 0.3s ease;
 }
 
-.div-resistance{
+.divresistance{
     position: fixed;
     text-align: center;
     font-family: MapleStory Bold;
@@ -206,7 +213,7 @@ h3{
     width: 17%;
     height: 30px;
     left: 61vw;
-    top: 65vh;
+    top: 70vh;
 }
 
 #resistance:hover{
@@ -237,7 +244,7 @@ h3{
     color: #333;
     transition: background-color 0.3s ease;
 }
-.div-Others{
+.divothers{
     position: fixed;
     text-align: center;
     font-family: MapleStory Bold;
@@ -245,14 +252,14 @@ h3{
     width: 17%;
     height: 30px;
     left: 80.5vw;
-    top: 65vh;
+    top: 70vh;
 }
 
-#Others:hover{
+#others:hover{
     overflow-y: scroll;
 }
 
-#Others{                     /*  Mexe na box  */
+#others{
     position: fixed;
     cursor: pointer;
     overflow: hidden;
@@ -266,33 +273,18 @@ h3{
     background: linear-gradient(107deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3533788515406162) 49%, rgba(0,0,0,1) 100%);
 }
 
-#Others li{
+#others li{
     font-size: 20px;
     margin: 5px 0;
 }
 
-#Others li:hover{
+#others li:hover{
     background-color: #ddd;
     color: #333;
     transition: background-color 0.3s ease;
 }
 
-
-#modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
-}
-
-
-#modalcaption {
+/* #modalcaption {
     background-color: rgba(0, 0, 0, 0.516);
     font-family: MapleStory Bold;
     text-shadow: 1px 1px 2px rgb(91, 91, 91);
@@ -302,21 +294,60 @@ h3{
     padding-top: 40px;
     padding-bottom: 20px;
     margin-bottom: 10px;
+} */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+}
+
+.modal-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    min-height: 70%;
+    min-width: 70%;
+    max-width: 80%;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 80%;
-    max-height: 80%;
+    width: 100%;
+    height: auto;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
 }
 
-#modalimage {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    transition: opacity 0.5s ease;
+.arrow-container {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    color: white;
+}
+
+.prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .close {
@@ -346,18 +377,6 @@ h3{
     outline: none;
 }
 
-#BotaoAnterior:hover, #BotaoProximo:hover{
-    color: rgb(255, 255, 255);
-}
-
-#BotaoAnterior {
-    left: 0;
-}
-
-#BotaoProximo {
-    right: 0;
-}
-
 footer{
     font-family: MapleStory Bold;
     font-size: 16px;
@@ -369,4 +388,59 @@ footer{
     width: 100%;
     bottom: 0;
 }
+
+.div-countdown{ 
+    background: linear-gradient(180deg, rgba(0,0,0,0.2805497198879552) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.2777485994397759) 100%);
+    text-align: center;
+    margin-top: 10%;
+    font-size: 150px;
+    margin-left: 0%;
+    width: 100%;
+    font-family: MapleStory Bold;
+    color: white;
+}
+
+
+#countdown:hover{
+    color: rgb(255, 225, 225);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+
+}
+
+
+.iconsyt{
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+    margin-top: 0%;
+    background-color: rgb(43, 0, 255);
+    height: 0%;
+}
+
+.link-twitch{
+    color: rgb(252, 252, 252);
+    font-size: 25px;
+    display: inline;
+    text-decoration: none;
+  }
+
+.link-youtube{
+    color: rgb(252, 252, 252);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.link-discord{
+    color: rgb(252, 252, 252);
+    font-size: 25px;
+    text-decoration: none;
+}
+.Supportx{
+    font-family: MapleStory Bold;
+    color: rgb(252, 252, 252);
+    font-size: 15px;
+}
+
+
+
 
