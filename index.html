@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleStory - Hyperion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>MapleStory</h1>
+        <h2>Hyperion</h2>
+        <!-- <img class="maplestorylogo" src="images/maplestorylogo.png" alt="MapleStory_logo.png"> -->
+        <hr>
+    </div>
+
+    <div class="background-div">
+        <video class="bg-video" src="videos/background-video.mp4" autoplay loop muted></video>
+        <div class="background-mask"></div>
+    </div>
+
+
+    <div class="div-explorer">
+        <h3>Explorer</h3>
+        <ul id="explorer">
+            <li data-image="/images/Explorer/HERO.png">Hero</li>
+            <li data-image="/images/Explorer/PALADIN.png">Paladin</li>
+            <li data-image="/images/Explorer/DARK KNIGHT.png">Dark Knight</li>
+            <li data-image="/images/Explorer/BUCCANEER.png">Buccaneer</li>
+            <li data-image="/images/Explorer/CORSAIR.png">Corsair</li>
+            <li data-image="/images/Explorer/CANNONEER.png">Cannoneer</li>
+            <li data-image="/images/Explorer/BOWMASTER.png">Bowmaster</li>
+            <li data-image="/images/Explorer/MARKSMAN.png">Marksman</li>
+            <li data-image="/images/Explorer/PATHFINDER.png">Pathfinder</li>
+            <li data-image="/images/Explorer/FIRE POISON.jpeg">Fire/Poison Mage</li>
+            <li data-image="/images/Explorer/ICE LIGHTNING.jpeg">Ice/Lightning Mage</li>
+            <li data-image="/images/Explorer/BISHOP.png">Bishop</li>
+            <li data-image="/images/Explorer/SHADOWER.png">Shadower</li>
+            <li data-image="/images/Explorer/DUAL BLADE.png">Dual Blade</li>
+            <li data-image="/images/Explorer/NIGHTLORD.png">Night Lord</li>
+        </ul>
+    </div>
+
+    <div id="modal" class="modal">
+        <div id="modalcaption"></div>
+        <span class="close">&times;</span>
+        <button id="BotaoAnterior" onclick="plusSlides(-1)">&lArr;</button>
+        <img class="modal-content" id="modalimage">
+        <button id="BotaoProximo" onclick="plusSlides(1)">&rArr;</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+<footer>Made By.: Dark (DarkPirate) - MapleStory Hyperion</footer>
+
+</html>
