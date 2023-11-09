@@ -46,6 +46,13 @@ classList.forEach(function (className) {
         }
     });
 
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
     function plusSlides(n) {
         showSlide(currentIndex += n);
     }

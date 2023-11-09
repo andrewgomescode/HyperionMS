@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
 }
 
@@ -310,7 +310,6 @@ h3{
 }
 
 .modal-content-container {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -318,7 +317,7 @@ h3{
     min-height: 70%;
     min-width: 70%;
     max-width: 80%;
-    transition: opacity 0.3s ease-in-out;
+    position: relative;
 }
 
 .modal-content {
@@ -332,22 +331,28 @@ h3{
 }
 
 .arrow-container {
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform:translateY(-50%);
     font-size: 24px;
     cursor: pointer;
-    position: fixed;
+    position: sticky;
     color: white;
 }
 
 .prev {
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 1vh;
 }
 
 .next {
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 1vh;
+}
+
+.prev:hover, .next:hover{
+    cursor: pointer;
 }
 
 .close {
@@ -409,12 +414,13 @@ footer{
 
 
 .iconsyt{
-    width: 100%;
-    text-align: right;
+    width: 22%;
+    top: 7vh;
+    left: 78%;
+    display: block;
+    position:absolute;
     font-size: 40px;
-    margin-top: 0%;
-    background-color: rgb(43, 0, 255);
-    height: 0%;
+    height: 2vh;
 }
 
 .link-twitch{
