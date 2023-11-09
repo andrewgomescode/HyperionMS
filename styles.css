@@ -19,11 +19,12 @@ body{
 
 h1{
     font-family: MapleStory Bold;
-    font-size: 56px;
+    font-size: 54px;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 2px black;
-    display: inline-block;
+    width: 100%;
+    position: absolute;
 }
 
 h1:hover{
@@ -39,9 +40,10 @@ h2{
     text-shadow: 1px 1px 2px black;
     margin-bottom: 14px;  
 }
+
 .maplestorylogo{
+    margin-left: 360px;
     width: 50px;
-    display: inline-block;
 }
 
 .background-div{
